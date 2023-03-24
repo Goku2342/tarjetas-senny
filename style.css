@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin:0;
+}
+
+.contenedor{
+    display:flex;
+    width:90vw;
+}
+
+.contenedor div:first-child{
+    background-image: url("./images/obelisco.png");
+}
+
+.contenedor div:nth-child(2){
+    background-image: url("./images/Cataratas\ del\ Iguazú.png");
+}
+
+.contenedor div:nth-child(3){
+    background-image: url("./images/cerro\ de\ los\ 7\ colores.png");
+}
+
+.imagen{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:80vh;
+    border-radius: 50px;
+    color:#fff;
+    cursor: pointer;
+    flex:0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.imagen h3{
+    font-size:24px;
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    margin:0;
+    opacity:0;
+}
+
+.imagen.activo{
+    flex:1;
+}
+
+.imagen.activo h3{
+    opacity:1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-widht:480px){
+    .contenedor{
+        width:100vw;
+    }
+}
